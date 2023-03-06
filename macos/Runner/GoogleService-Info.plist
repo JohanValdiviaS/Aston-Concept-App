@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>923610257490-rp08nkvohu9i34s4vgnhcsp26sc2lat1.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.923610257490-rp08nkvohu9i34s4vgnhcsp26sc2lat1</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDymkwf1ANaYDktR_6Mkdj66l2GJPn3xWU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>923610257490</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.astonApp.RunnerTests</string>
+	<key>PROJECT_ID</key>
+	<string>aston-app-v1</string>
+	<key>STORAGE_BUCKET</key>
+	<string>aston-app-v1.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:923610257490:ios:5727d8d7be67f94b6d678b</string>
+</dict>
+</plist>

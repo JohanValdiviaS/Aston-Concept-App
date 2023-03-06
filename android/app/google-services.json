@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "923610257490",
+    "project_id": "aston-app-v1",
+    "storage_bucket": "aston-app-v1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:923610257490:android:4782a24934e3edd26d678b",
+        "android_client_info": {
+          "package_name": "com.johansalas.aston_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "923610257490-vmm9td6rrc5ng3gussa2spv2urlp57m6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGvnFFJgWZ9eFxJx8BPa4yMGn-gUljZkg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "923610257490-vmm9td6rrc5ng3gussa2spv2urlp57m6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
