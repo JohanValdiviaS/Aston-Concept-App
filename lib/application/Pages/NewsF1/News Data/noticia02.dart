@@ -1,6 +1,6 @@
+import 'package:aston_app/application/Pages/NewsF1/News%20Data/NewsDataEntities.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class News02 extends StatefulWidget {
   const News02({super.key});
@@ -23,30 +23,21 @@ class _News02State extends State<News02> {
                 future: noticiasF1.doc('noticia02').get(),
                 builder: (context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.waiting) {
-                    return Center(
-                      child: Padding(
-                        padding: const EdgeInsets.only(
-                          top: 320,
-                          bottom: 320,
-                        ),
-                        child: Column(
-                          children: [
-                            Text(
-                              "Loading...",
-                              style: GoogleFonts.ptSans(
-                                fontSize: 28,
-                                fontWeight: FontWeight.w700,
-                                color: const Color.fromRGBO(0, 89, 79, 1),
-                              ),
-                            ),
-                            const SizedBox(
-                              height: 15,
-                            ),
-                            const CircularProgressIndicator(
-                              color: Color.fromRGBO(0, 89, 79, 1),
-                            ),
-                          ],
-                        ),
+                    return Padding(
+                      padding: paddingloading,
+                      child: Column(
+                        children: [
+                          Text(
+                            "Loading...",
+                            style: styleloading,
+                          ),
+                          const SizedBox(
+                            height: 15,
+                          ),
+                          const CircularProgressIndicator(
+                            color: Color.fromRGBO(0, 89, 79, 1),
+                          ),
+                        ],
                       ),
                     );
                   }
@@ -67,27 +58,19 @@ class _News02State extends State<News02> {
                   return Column(
                     children: [
                       const SizedBox(height: 50),
-                      Center(
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 25, right: 25),
-                          child: Text(
-                            snapshot.data?['titulo'],
-                            style: GoogleFonts.roboto(
-                              fontSize: 20,
-                              color: const Color.fromRGBO(0, 89, 79, 1),
-                              fontWeight: FontWeight.w600,
-                            ),
-                            textAlign: TextAlign.justify,
-                          ),
+                      Padding(
+                        padding: mypadding,
+                        child: Text(
+                          snapshot.data?['titulo'],
+                          style: styletitle,
+                          textAlign: TextAlign.justify,
                         ),
                       ),
                       const SizedBox(height: 30),
                       SizedBox(
                         height: 242.5,
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(
-                            10,
-                          ),
+                          borderRadius: BorderRadius.circular(10),
                           child: Image.network(
                             'https://amsc-prod-cd.azureedge.net/-/media/common/news/45c4aadefca18e3d27e0d71ceb954fbd.jpg?mw=1920&rev=b317c9f45b75435bb48b47118f8132b4&format=webp&hash=A7ED1DC7E1D12FB79B304BCDAACF58AC',
                           ),
@@ -95,309 +78,130 @@ class _News02State extends State<News02> {
                       ),
                       const SizedBox(height: 30),
                       Padding(
-                        padding: const EdgeInsets.only(
-                          left: 25,
-                          right: 25,
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Center(
-                              child: Text(
-                                snapshot.data?['descripcion1'],
-                                style: GoogleFonts.roboto(
-                                  fontSize: 18,
-                                  color: Colors.black,
-                                ),
-                                textAlign: TextAlign.justify,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(height: 20),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                          left: 25,
-                          right: 25,
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Center(
-                              child: Text(
-                                snapshot.data?['descripcion2'],
-                                style: GoogleFonts.roboto(
-                                  fontSize: 18,
-                                  color: Colors.black,
-                                ),
-                                textAlign: TextAlign.justify,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(height: 20),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                          left: 25,
-                          right: 25,
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Center(
-                              child: Text(
-                                snapshot.data?['descripcion3'],
-                                style: GoogleFonts.roboto(
-                                  fontSize: 18,
-                                  color: Colors.black,
-                                ),
-                                textAlign: TextAlign.justify,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(height: 20),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                          left: 25,
-                          right: 25,
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Center(
-                              child: Text(
-                                snapshot.data?['descripcion4'],
-                                style: GoogleFonts.roboto(
-                                  fontSize: 18,
-                                  color: Colors.black,
-                                ),
-                                textAlign: TextAlign.justify,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(height: 20),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                          left: 25,
-                          right: 25,
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Center(
-                              child: Text(
-                                snapshot.data?['descripcion6'],
-                                style: GoogleFonts.roboto(
-                                  fontSize: 18,
-                                  color: Colors.black,
-                                ),
-                                textAlign: TextAlign.justify,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(height: 20),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                          left: 25,
-                          right: 25,
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Center(
-                              child: Text(
-                                snapshot.data?['descripcion7'],
-                                style: GoogleFonts.roboto(
-                                  fontSize: 18,
-                                  color: Colors.black,
-                                ),
-                                textAlign: TextAlign.justify,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(height: 20),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                          left: 25,
-                          right: 25,
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Center(
-                              child: Text(
-                                snapshot.data?['descripcion8'],
-                                style: GoogleFonts.roboto(
-                                  fontSize: 18,
-                                  color: Colors.black,
-                                ),
-                                textAlign: TextAlign.justify,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(height: 20),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                          left: 25,
-                          right: 25,
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Center(
-                              child: Text(
-                                snapshot.data?['descripcion9'],
-                                style: GoogleFonts.roboto(
-                                  fontSize: 18,
-                                  color: Colors.black,
-                                ),
-                                textAlign: TextAlign.justify,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(height: 20),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                          left: 25,
-                          right: 25,
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Center(
-                              child: Text(
-                                snapshot.data?['descripcion10'],
-                                style: GoogleFonts.roboto(
-                                  fontSize: 18,
-                                  color: Colors.black,
-                                ),
-                                textAlign: TextAlign.justify,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(height: 20),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                          left: 25,
-                          right: 25,
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Center(
-                              child: Text(
-                                snapshot.data?['descripcion11'],
-                                style: GoogleFonts.roboto(
-                                  fontSize: 18,
-                                  color: Colors.black,
-                                ),
-                                textAlign: TextAlign.justify,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(height: 20),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                          left: 25,
-                          right: 25,
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Center(
-                              child: Text(
-                                snapshot.data?['descripcion12'],
-                                style: GoogleFonts.roboto(
-                                  fontSize: 18,
-                                  color: Colors.black,
-                                ),
-                                textAlign: TextAlign.justify,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(height: 20),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                          left: 25,
-                          right: 25,
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Center(
-                              child: Text(
-                                snapshot.data?['descripcion13'],
-                                style: GoogleFonts.roboto(
-                                  fontSize: 18,
-                                  color: Colors.black,
-                                ),
-                                textAlign: TextAlign.justify,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(height: 20),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                          left: 25,
-                          right: 25,
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Center(
-                              child: Text(
-                                snapshot.data?['descripcion14'],
-                                style: GoogleFonts.roboto(
-                                  fontSize: 18,
-                                  color: Colors.black,
-                                ),
-                                textAlign: TextAlign.justify,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(height: 30),
-                      Center(
+                        padding: mypadding,
                         child: Text(
-                          snapshot.data?['fecha'],
-                          style: GoogleFonts.roboto(
-                            fontSize: 15,
-                            color: Colors.black,
-                          ),
+                          snapshot.data?['descripcion1'],
+                          style: mystyle,
+                          textAlign: TextAlign.justify,
                         ),
                       ),
-                      const SizedBox(height: 30),
-                      Center(
+                      const SizedBox(height: 20),
+                      Padding(
+                        padding: mypadding,
                         child: Text(
-                          snapshot.data?['copy'],
-                          style: GoogleFonts.roboto(
-                            fontSize: 18,
-                            color: Colors.black,
-                          ),
+                          snapshot.data?['descripcion2'],
+                          style: mystyle,
+                          textAlign: TextAlign.justify,
                         ),
+                      ),
+                      const SizedBox(height: 20),
+                      Padding(
+                        padding: mypadding,
+                        child: Text(
+                          snapshot.data?['descripcion3'],
+                          style: mystyle,
+                          textAlign: TextAlign.justify,
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      Padding(
+                        padding: mypadding,
+                        child: Text(
+                          snapshot.data?['descripcion4'],
+                          style: mystyle,
+                          textAlign: TextAlign.justify,
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      Padding(
+                        padding: mypadding,
+                        child: Text(
+                          snapshot.data?['descripcion6'],
+                          style: mystyle,
+                          textAlign: TextAlign.justify,
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      Padding(
+                        padding: mypadding,
+                        child: Text(
+                          snapshot.data?['descripcion7'],
+                          style: mystyle,
+                          textAlign: TextAlign.justify,
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      Padding(
+                        padding: mypadding,
+                        child: Text(
+                          snapshot.data?['descripcion8'],
+                          style: mystyle,
+                          textAlign: TextAlign.justify,
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      Padding(
+                        padding: mypadding,
+                        child: Text(
+                          snapshot.data?['descripcion9'],
+                          style: mystyle,
+                          textAlign: TextAlign.justify,
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      Padding(
+                        padding: mypadding,
+                        child: Text(
+                          snapshot.data?['descripcion10'],
+                          style: mystyle,
+                          textAlign: TextAlign.justify,
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      Padding(
+                        padding: mypadding,
+                        child: Text(
+                          snapshot.data?['descripcion11'],
+                          style: mystyle,
+                          textAlign: TextAlign.justify,
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      Padding(
+                        padding: mypadding,
+                        child: Text(
+                          snapshot.data?['descripcion12'],
+                          style: mystyle,
+                          textAlign: TextAlign.justify,
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      Padding(
+                        padding: mypadding,
+                        child: Text(
+                          snapshot.data?['descripcion13'],
+                          style: mystyle,
+                          textAlign: TextAlign.justify,
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      Padding(
+                        padding: mypadding,
+                        child: Text(
+                          snapshot.data?['descripcion14'],
+                          style: mystyle,
+                          textAlign: TextAlign.justify,
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      Text(
+                        snapshot.data?['fecha'],
+                        style: stylefecha,
+                      ),
+                      const SizedBox(height: 20),
+                      Text(
+                        snapshot.data?['copy'],
+                        style: stylecopy,
                       ),
                       const SizedBox(height: 30),
                     ],
