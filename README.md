@@ -1,15 +1,14 @@
 # aston_app
 
-A new Flutter project.
-
+This application is a concept app
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+was designed in figma, built entirely in flutter from 
+scratch, has no relation with the Aston Martin company, 
+is still under construction, is using firebase as a database, 
+and other packages.
 
 A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
