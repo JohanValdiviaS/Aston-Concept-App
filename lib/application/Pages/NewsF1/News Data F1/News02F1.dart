@@ -1,10 +1,10 @@
 // ignore_for_file: file_names
-
 import 'package:aston_app/application/CarPage/CarListImg/NewsF102.dart';
+import 'package:aston_app/application/Pages/NewsF1/News%20Data%20F1/N2F1Carousel.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'NewsDataF1Entities.dart';
 
 class News02F1 extends StatefulWidget {
   const News02F1({super.key});
@@ -27,30 +27,21 @@ class _News02F1State extends State<News02F1> {
                 future: noticiasF1.doc('noticiaf102').get(),
                 builder: (context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.waiting) {
-                    return Center(
-                      child: Padding(
-                        padding: const EdgeInsets.only(
-                          top: 320,
-                          bottom: 320,
-                        ),
-                        child: Column(
-                          children: [
-                            Text(
-                              "Loading...",
-                              style: GoogleFonts.ptSans(
-                                fontSize: 28,
-                                fontWeight: FontWeight.w700,
-                                color: const Color.fromRGBO(0, 89, 79, 1),
-                              ),
-                            ),
-                            const SizedBox(
-                              height: 15,
-                            ),
-                            const CircularProgressIndicator(
-                              color: Color.fromRGBO(0, 89, 79, 1),
-                            ),
-                          ],
-                        ),
+                    return Padding(
+                      padding: paddingloading,
+                      child: Column(
+                        children: [
+                          Text(
+                            "Loading...",
+                            style: styleloading,
+                          ),
+                          const SizedBox(
+                            height: 15,
+                          ),
+                          const CircularProgressIndicator(
+                            color: Color.fromRGBO(0, 89, 79, 1),
+                          ),
+                        ],
                       ),
                     );
                   }
@@ -58,9 +49,7 @@ class _News02F1State extends State<News02F1> {
                     return const Column(
                       children: [
                         Text('Something went wrong'),
-                        SizedBox(
-                          height: 15,
-                        ),
+                        SizedBox(height: 15),
                         CircularProgressIndicator(
                           color: Color.fromRGBO(0, 89, 79, 1),
                         ),
@@ -70,26 +59,15 @@ class _News02F1State extends State<News02F1> {
 
                   return Column(
                     children: [
-                      const SizedBox(
-                        height: 20,
-                      ),
+                      const SizedBox(height: 20),
                       Row(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.only(
-                              left: 25,
-                              right: 25,
-                            ),
-                            child: Center(
-                              child: Text(
-                                snapshot.data?['titulo'],
-                                style: GoogleFonts.roboto(
-                                  fontSize: 17.2,
-                                  color: const Color.fromRGBO(0, 89, 79, 1),
-                                  fontWeight: FontWeight.w600,
-                                ),
-                                textAlign: TextAlign.justify,
-                              ),
+                            padding: mypadding,
+                            child: Text(
+                              snapshot.data?['titulo'],
+                              style: styletitle,
+                              textAlign: TextAlign.justify,
                             ),
                           ),
                           SizedBox(
@@ -118,28 +96,14 @@ class _News02F1State extends State<News02F1> {
                       ),
                       const SizedBox(height: 30),
                       Padding(
-                        padding: const EdgeInsets.only(
-                          left: 25,
-                          right: 25,
-                        ),
-                        child: Column(
-                          children: [
-                            Center(
-                              child: Text(
-                                snapshot.data?['subtitulo'],
-                                style: GoogleFonts.roboto(
-                                  fontSize: 17,
-                                  color: Colors.black,
-                                ),
-                                textAlign: TextAlign.justify,
-                              ),
-                            ),
-                          ],
+                        padding: mypadding,
+                        child: Text(
+                          snapshot.data?['subtitulo'],
+                          style: stylesubtitle,
+                          textAlign: TextAlign.justify,
                         ),
                       ),
-                      const SizedBox(
-                        height: 20,
-                      ),
+                      const SizedBox(height: 20),
                       SizedBox(
                         height: 242.5,
                         child: ClipRRect(
@@ -152,74 +116,24 @@ class _News02F1State extends State<News02F1> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(24.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Center(
-                              child: Text(
-                                snapshot.data?['descripción'],
-                                style: GoogleFonts.roboto(
-                                  fontSize: 17,
-                                  color: Colors.black,
-                                ),
-                                textAlign: TextAlign.justify,
-                              ),
-                            ),
-                          ],
+                        padding: mypadding,
+                        child: Text(
+                          snapshot.data?['descripción'],
+                          style: mystyle,
+                          textAlign: TextAlign.justify,
                         ),
                       ),
                       const SizedBox(height: 15),
-                      Container(
-                        width: MediaQuery.of(context).size.width,
-                        margin: const EdgeInsets.symmetric(horizontal: 1.0),
-                        child: CarouselSlider(
-                          options: CarouselOptions(
-                            height: 220,
-                            autoPlay: true,
-                            aspectRatio: 2.0,
-                            enlargeCenterPage: true,
-                          ),
-                          items: imgListNewsF102
-                              .map(
-                                (item) => ClipRRect(
-                                  borderRadius: BorderRadius.circular(15),
-                                  child: Container(
-                                    decoration: const BoxDecoration(
-                                      color: Color.fromARGB(255, 20, 156, 138),
-                                      borderRadius: BorderRadius.all(
-                                        Radius.circular(15.0),
-                                      ),
-                                    ),
-                                    child: Image.network(
-                                      item,
-                                      fit: BoxFit.fitWidth,
-                                    ),
-                                  ),
-                                ),
-                              )
-                              .toList(),
-                        ),
+                      const CarouselNews02(),
+                      const SizedBox(height: 20),
+                      Text(
+                        snapshot.data?['fecha'],
+                        style: stylefecha,
                       ),
-                      const SizedBox(height: 30),
-                      Center(
-                        child: Text(
-                          snapshot.data?['fecha'],
-                          style: GoogleFonts.roboto(
-                            fontSize: 15,
-                            color: Colors.black,
-                          ),
-                        ),
-                      ),
-                      const SizedBox(height: 30),
-                      Center(
-                        child: Text(
-                          snapshot.data?['copy'],
-                          style: GoogleFonts.roboto(
-                            fontSize: 17,
-                            color: Colors.black,
-                          ),
-                        ),
+                      const SizedBox(height: 20),
+                      Text(
+                        snapshot.data?['copy'],
+                        style: stylecopy,
                       ),
                       const SizedBox(height: 30),
                     ],
