@@ -1,7 +1,5 @@
 // ignore_for_file: file_names
-import 'package:aston_app/application/CarPage/CarListImg/NewsF102.dart';
 import 'package:aston_app/application/Pages/NewsF1/News%20Data%20F1/N2F1Carousel.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'NewsDataF1Entities.dart';
