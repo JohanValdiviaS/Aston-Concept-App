@@ -1,11 +1,14 @@
 // ignore_for_file: file_names
 
+import 'package:aston_app/application/Pages/NewsF1/News%20Data%20F1/News01F1.dart';
+import 'package:aston_app/application/Pages/NewsF1/News%20Data%20F1/News02F1.dart';
 import 'package:aston_app/application/Pages/NewsF1/News%20Data%20F1/News03F1.dart';
 import 'package:aston_app/application/Pages/NewsF1/News%20Data%20F1/News04F1.dart';
 import 'package:aston_app/application/Pages/NewsF1/News%20Data/noticia01.dart';
 import 'package:aston_app/application/Pages/NewsF1/News%20Data/noticia02.dart';
 import 'package:aston_app/application/Pages/NewsF1/News%20Data/noticia03.dart';
 import 'package:aston_app/application/Pages/NewsF1/News%20Data/noticia04.dart';
+import 'package:aston_app/entity_manager/NewsEntities/AstonNewsEntities.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -33,19 +36,12 @@ class _AstonNewsPageState extends State<AstonNewsPage> {
                   if (snapshot.connectionState == ConnectionState.waiting) {
                     return Center(
                       child: Padding(
-                        padding: const EdgeInsets.only(
-                          top: 320,
-                          bottom: 320,
-                        ),
+                        padding: paddingloading,
                         child: Column(
                           children: [
                             Text(
                               "Loading...",
-                              style: GoogleFonts.ptSans(
-                                fontSize: 28,
-                                fontWeight: FontWeight.w700,
-                                color: const Color.fromRGBO(0, 89, 79, 1),
-                              ),
+                              style: styleloading,
                             ),
                             const SizedBox(
                               height: 15,
@@ -59,16 +55,24 @@ class _AstonNewsPageState extends State<AstonNewsPage> {
                     );
                   }
                   if (snapshot.hasError) {
-                    return const Column(
-                      children: [
-                        Text('Something went wrong'),
-                        SizedBox(
-                          height: 15,
+                    return Center(
+                      child: Padding(
+                        padding: paddingloading,
+                        child: Column(
+                          children: [
+                            Text(
+                              'Something went wrong',
+                              style: styleloading,
+                            ),
+                            const SizedBox(
+                              height: 15,
+                            ),
+                            const CircularProgressIndicator(
+                              color: Color.fromRGBO(0, 89, 79, 1),
+                            ),
+                          ],
                         ),
-                        CircularProgressIndicator(
-                          color: Color.fromRGBO(0, 89, 79, 1),
-                        ),
-                      ],
+                      ),
                     );
                   }
 
@@ -91,11 +95,7 @@ class _AstonNewsPageState extends State<AstonNewsPage> {
                         child: Center(
                           child: Text(
                             'Noticias',
-                            style: GoogleFonts.josefinSlab(
-                              fontSize: 36,
-                              fontWeight: FontWeight.w700,
-                              color: const Color.fromRGBO(193, 255, 93, 1),
-                            ),
+                            style: NewsStyle,
                           ),
                         ),
                       ),
@@ -549,7 +549,7 @@ class _AstonNewsPageState extends State<AstonNewsPage> {
                                               context,
                                               MaterialPageRoute(
                                                 builder: (context) =>
-                                                    const News03F1(),
+                                                    const News01F1(),
                                               ),
                                             );
                                           },
@@ -648,7 +648,7 @@ class _AstonNewsPageState extends State<AstonNewsPage> {
                                               context,
                                               MaterialPageRoute(
                                                 builder: (context) =>
-                                                    const News03F1(),
+                                                    const News02F1(),
                                               ),
                                             );
                                           },

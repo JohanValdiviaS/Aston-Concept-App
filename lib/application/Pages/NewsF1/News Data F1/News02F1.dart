@@ -62,14 +62,17 @@ class _News02F1State extends State<News02F1> {
                         children: [
                           Padding(
                             padding: mypadding,
-                            child: Text(
-                              snapshot.data?['titulo'],
-                              style: styletitle,
-                              textAlign: TextAlign.justify,
+                            child: SizedBox(
+                              width: 200,
+                              child: Text(
+                                snapshot.data?['titulo'],
+                                style: styletitle,
+                                textAlign: TextAlign.justify,
+                              ),
                             ),
                           ),
                           SizedBox(
-                            height: 152.5,
+                            height: 162.5,
                             child: Container(
                               decoration: BoxDecoration(
                                 border: Border.all(
@@ -113,6 +116,7 @@ class _News02F1State extends State<News02F1> {
                           ),
                         ),
                       ),
+                      const SizedBox(height: 15),
                       Padding(
                         padding: mypadding,
                         child: Text(

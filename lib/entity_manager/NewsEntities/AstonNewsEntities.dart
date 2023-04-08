@@ -1,8 +1,27 @@
-// ignore_for_file: file_names
+// ignore_for_file: file_names, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+// Padding Entities
+const mypadding = EdgeInsets.only(
+  left: 25,
+  right: 25,
+);
+
+const paddingloading = EdgeInsets.only(
+  top: 320,
+  bottom: 320,
+);
+
+// Container Style
+final NewsStyle = GoogleFonts.josefinSlab(
+  fontSize: 36,
+  fontWeight: FontWeight.w700,
+  color: const Color.fromRGBO(193, 255, 93, 1),
+);
+
+// Text Style Entities
 final styleloading = GoogleFonts.ptSans(
   fontSize: 28,
   fontWeight: FontWeight.w700,
@@ -10,7 +29,7 @@ final styleloading = GoogleFonts.ptSans(
 );
 
 final styletitle = GoogleFonts.roboto(
-  fontSize: 20,
+  fontSize: 22,
   color: const Color.fromRGBO(0, 89, 79, 1),
   fontWeight: FontWeight.w600,
 );
@@ -34,14 +53,4 @@ final stylefecha = GoogleFonts.roboto(
 final stylecopy = GoogleFonts.roboto(
   fontSize: 18,
   color: const Color.fromRGBO(0, 89, 79, 1),
-);
-
-const mypadding = EdgeInsets.only(
-  left: 25,
-  right: 25,
-);
-
-const paddingloading = EdgeInsets.only(
-  top: 320,
-  bottom: 320,
 );
