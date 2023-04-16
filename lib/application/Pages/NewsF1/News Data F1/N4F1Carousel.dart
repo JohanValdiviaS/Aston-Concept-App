@@ -13,7 +13,7 @@ class _CarouselNews04State extends State<CarouselNews04> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 182.5,
+      height: 140,
       child: Container(
         decoration: BoxDecoration(
           border: Border.all(

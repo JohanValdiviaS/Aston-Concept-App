@@ -210,7 +210,7 @@ class _AMR21State extends State<AMR21> {
                                 height: 10,
                               ),
                               SizedBox(
-                                height: 230,
+                                height: 210,
                                 child: Container(
                                   decoration: BoxDecoration(
                                     border: Border.all(
@@ -234,7 +234,7 @@ class _AMR21State extends State<AMR21> {
                             ],
                           ),
                           const SizedBox(
-                            width: 25,
+                            width: 10,
                           ),
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -264,7 +264,7 @@ class _AMR21State extends State<AMR21> {
                                 height: 10,
                               ),
                               SizedBox(
-                                height: 230,
+                                height: 210,
                                 child: Container(
                                   decoration: BoxDecoration(
                                     border: Border.all(

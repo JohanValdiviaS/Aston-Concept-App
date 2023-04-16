@@ -166,7 +166,7 @@ class _VantageV12CoupeState extends State<VantageV12Coupe> {
                         child: Row(
                           children: [
                             const SizedBox(
-                              width: 10,
+                              width: 20,
                             ),
                             const SizedBox(
                               child: Center(
@@ -201,7 +201,7 @@ class _VantageV12CoupeState extends State<VantageV12Coupe> {
                               child: Column(
                                 children: [
                                   Container(
-                                    width: 240,
+                                    width: 210,
                                     height: 5,
                                     decoration: const BoxDecoration(
                                       color: Color.fromRGBO(0, 146, 129, 1),
@@ -211,7 +211,7 @@ class _VantageV12CoupeState extends State<VantageV12Coupe> {
                                     height: 30,
                                   ),
                                   Container(
-                                    width: 240,
+                                    width: 210,
                                     height: 5,
                                     decoration: const BoxDecoration(
                                       color: Color.fromRGBO(0, 146, 129, 1),
@@ -221,7 +221,7 @@ class _VantageV12CoupeState extends State<VantageV12Coupe> {
                                     height: 30,
                                   ),
                                   Container(
-                                    width: 240,
+                                    width: 210,
                                     height: 5,
                                     decoration: const BoxDecoration(
                                       color: Color.fromRGBO(0, 146, 129, 1),

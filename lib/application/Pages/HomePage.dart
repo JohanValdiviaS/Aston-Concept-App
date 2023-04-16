@@ -29,7 +29,7 @@ class _HomePageState extends State<HomePage> {
         color: const Color.fromRGBO(0, 89, 79, 1),
         child: Padding(
           padding: const EdgeInsets.symmetric(
-            horizontal: 90,
+            horizontal: 70,
             vertical: 5,
           ),
           child: GNav(
@@ -39,12 +39,12 @@ class _HomePageState extends State<HomePage> {
             tabBackgroundColor: const Color.fromRGBO(0, 89, 79, 1),
             tabBorder: Border.all(
               color: const Color.fromRGBO(193, 255, 93, 1),
-              width: 2,
+              width: 2.5,
             ),
-            tabBorderRadius: 20,
+            tabBorderRadius: 15,
             duration: const Duration(milliseconds: 200),
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
-            gap: 2,
+            gap: 3,
             selectedIndex: currentIndex,
             onTabChange: (index) {
               setState(

@@ -36,8 +36,8 @@ class _VantageVersionsState extends State<VantageVersions> {
         color: const Color.fromRGBO(0, 89, 79, 1),
         child: Padding(
           padding: const EdgeInsets.symmetric(
-            horizontal: 5,
-            vertical: 5,
+            horizontal: 12,
+            vertical: 10,
           ),
           child: GNav(
             backgroundColor: const Color.fromRGBO(0, 89, 79, 1),
@@ -48,11 +48,11 @@ class _VantageVersionsState extends State<VantageVersions> {
               color: const Color.fromRGBO(193, 255, 93, 1),
               width: 2,
             ),
-            tabBorderRadius: 20,
+            tabBorderRadius: 15,
             duration: const Duration(milliseconds: 200),
             padding: const EdgeInsets.symmetric(
-              horizontal: 10,
-              vertical: 8,
+              horizontal: 8,
+              vertical: 10,
             ),
             gap: 2,
             selectedIndex: currentIndex,

@@ -72,7 +72,7 @@ class _News01F1State extends State<News01F1> {
                           textAlign: TextAlign.justify,
                         ),
                       ),
-                      const SizedBox(height: 30),
+                      const SizedBox(height: 20),
                       Padding(
                         padding: mypadding,
                         child: Column(

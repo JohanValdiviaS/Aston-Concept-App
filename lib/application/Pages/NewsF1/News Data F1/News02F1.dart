@@ -72,7 +72,7 @@ class _News02F1State extends State<News02F1> {
                             ),
                           ),
                           SizedBox(
-                            height: 162.5,
+                            height: 150,
                             child: Container(
                               decoration: BoxDecoration(
                                 border: Border.all(

@@ -42,7 +42,7 @@ class _DBSVersionsState extends State<DBSVersions> {
               color: const Color.fromRGBO(193, 255, 93, 1),
               width: 2,
             ),
-            tabBorderRadius: 20,
+            tabBorderRadius: 15,
             duration: const Duration(milliseconds: 200),
             padding: const EdgeInsets.symmetric(
               horizontal: 10,

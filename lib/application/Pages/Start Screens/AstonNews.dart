@@ -99,10 +99,10 @@ class _AstonNewsPageState extends State<AstonNewsPage> {
                           ),
                         ),
                       ),
-                      const SizedBox(
-                        height: 20,
-                      ),
+                      const SizedBox(height: 20),
                       Container(
+                        width: 365,
+                        height: 180,
                         decoration: BoxDecoration(
                           color: const Color.fromRGBO(0, 89, 79, 1),
                           borderRadius: BorderRadius.circular(
@@ -139,7 +139,7 @@ class _AstonNewsPageState extends State<AstonNewsPage> {
                                       width: 20,
                                     ),
                                     SizedBox(
-                                      width: 210,
+                                      width: 175,
                                       child: Text(
                                         snapshot.data?['noticiasn01'],
                                         style: GoogleFonts.roboto(
@@ -193,6 +193,8 @@ class _AstonNewsPageState extends State<AstonNewsPage> {
                         height: 20,
                       ),
                       Container(
+                        width: 365,
+                        height: 180,
                         decoration: BoxDecoration(
                           color: const Color.fromRGBO(0, 89, 79, 1),
                           borderRadius: BorderRadius.circular(
@@ -202,7 +204,7 @@ class _AstonNewsPageState extends State<AstonNewsPage> {
                         child: Column(
                           children: [
                             SizedBox(
-                              height: 140,
+                              height: 130,
                               child: Padding(
                                 padding:
                                     const EdgeInsets.symmetric(horizontal: 10),
@@ -229,7 +231,7 @@ class _AstonNewsPageState extends State<AstonNewsPage> {
                                       width: 20,
                                     ),
                                     SizedBox(
-                                      width: 210,
+                                      width: 175,
                                       child: Text(
                                         snapshot.data?['noticiasn02'],
                                         style: GoogleFonts.roboto(
@@ -273,16 +275,14 @@ class _AstonNewsPageState extends State<AstonNewsPage> {
                                 ),
                               ),
                             ),
-                            const SizedBox(
-                              height: 10,
-                            ),
+                            const SizedBox(height: 10),
                           ],
                         ),
                       ),
-                      const SizedBox(
-                        height: 20,
-                      ),
+                      const SizedBox(height: 20),
                       Container(
+                        width: 365,
+                        height: 180,
                         decoration: BoxDecoration(
                           color: const Color.fromRGBO(0, 89, 79, 1),
                           borderRadius: BorderRadius.circular(
@@ -292,7 +292,7 @@ class _AstonNewsPageState extends State<AstonNewsPage> {
                         child: Column(
                           children: [
                             SizedBox(
-                              height: 140,
+                              height: 130,
                               child: Padding(
                                 padding:
                                     const EdgeInsets.symmetric(horizontal: 10),
@@ -319,7 +319,7 @@ class _AstonNewsPageState extends State<AstonNewsPage> {
                                       width: 20,
                                     ),
                                     SizedBox(
-                                      width: 210,
+                                      width: 175,
                                       child: Text(
                                         snapshot.data?['noticiasn03'],
                                         style: GoogleFonts.roboto(
@@ -363,16 +363,14 @@ class _AstonNewsPageState extends State<AstonNewsPage> {
                                 ),
                               ),
                             ),
-                            const SizedBox(
-                              height: 10,
-                            ),
+                            const SizedBox(height: 10),
                           ],
                         ),
                       ),
-                      const SizedBox(
-                        height: 20,
-                      ),
+                      const SizedBox(height: 20),
                       Container(
+                        width: 365,
+                        height: 180,
                         decoration: BoxDecoration(
                           color: const Color.fromRGBO(0, 89, 79, 1),
                           borderRadius: BorderRadius.circular(
@@ -382,7 +380,7 @@ class _AstonNewsPageState extends State<AstonNewsPage> {
                         child: Column(
                           children: [
                             SizedBox(
-                              height: 140,
+                              height: 130,
                               child: Padding(
                                 padding:
                                     const EdgeInsets.symmetric(horizontal: 10),
@@ -400,16 +398,14 @@ class _AstonNewsPageState extends State<AstonNewsPage> {
                                         ),
                                         width: 150,
                                         child: Image.network(
-                                          'https://amsc-prod-cd.azureedge.net/-/media/common/news/b413b54c6c874e6d02fdec58ebd10331.jpg?mw=1920&rev=a76c1f92ae8944238cb4f8b7668eb4e1&format=webp&hash=49AD2FEBBA31F6E8E343858FC9AF8E89',
+                                          'https://amsc-prod-cd.azureedge.net/-/media/common/news/b413b54c6c874e6d02fdec58ebd10331.jpg?mw=1920&rev=a76c1f92ae8944238cb4f8b7668eb4e1&format=webp&hash=49AD2FEBBA31F6E8E343658FC9AF8E89',
                                           fit: BoxFit.fitWidth,
                                         ),
                                       ),
                                     ),
-                                    const SizedBox(
-                                      width: 20,
-                                    ),
+                                    const SizedBox(width: 20),
                                     SizedBox(
-                                      width: 210,
+                                      width: 175,
                                       child: Text(
                                         snapshot.data?['noticiasn04'],
                                         style: GoogleFonts.roboto(
@@ -453,9 +449,7 @@ class _AstonNewsPageState extends State<AstonNewsPage> {
                                 ),
                               ),
                             ),
-                            const SizedBox(
-                              height: 10,
-                            ),
+                            const SizedBox(height: 10),
                           ],
                         ),
                       ),
@@ -484,10 +478,10 @@ class _AstonNewsPageState extends State<AstonNewsPage> {
                           ),
                         ),
                       ),
-                      const SizedBox(
-                        height: 20,
-                      ),
+                      const SizedBox(height: 20),
                       Container(
+                        width: 365,
+                        height: 180,
                         decoration: BoxDecoration(
                           color: const Color.fromRGBO(161, 211, 80, 1),
                           borderRadius: BorderRadius.circular(
@@ -497,7 +491,7 @@ class _AstonNewsPageState extends State<AstonNewsPage> {
                         child: Column(
                           children: [
                             SizedBox(
-                              height: 180,
+                              height: 170,
                               child: Padding(
                                 padding:
                                     const EdgeInsets.symmetric(horizontal: 10),
@@ -520,16 +514,14 @@ class _AstonNewsPageState extends State<AstonNewsPage> {
                                         ),
                                       ),
                                     ),
-                                    const SizedBox(
-                                      width: 20,
-                                    ),
+                                    const SizedBox(width: 20),
                                     Column(
                                       children: [
                                         SizedBox(
                                           height: 120,
                                           child: Center(
                                             child: SizedBox(
-                                              width: 210,
+                                              width: 175,
                                               child: Text(
                                                 snapshot.data?['noticiasf101'],
                                                 style: GoogleFonts.roboto(
@@ -577,16 +569,14 @@ class _AstonNewsPageState extends State<AstonNewsPage> {
                                 ),
                               ),
                             ),
-                            const SizedBox(
-                              height: 10,
-                            ),
+                            const SizedBox(height: 10),
                           ],
                         ),
                       ),
-                      const SizedBox(
-                        height: 20,
-                      ),
+                      const SizedBox(height: 20),
                       Container(
+                        width: 365,
+                        height: 180,
                         decoration: BoxDecoration(
                           color: const Color.fromRGBO(161, 211, 80, 1),
                           borderRadius: BorderRadius.circular(
@@ -596,7 +586,7 @@ class _AstonNewsPageState extends State<AstonNewsPage> {
                         child: Column(
                           children: [
                             SizedBox(
-                              height: 180,
+                              height: 170,
                               child: Padding(
                                 padding:
                                     const EdgeInsets.symmetric(horizontal: 10),
@@ -619,16 +609,14 @@ class _AstonNewsPageState extends State<AstonNewsPage> {
                                         ),
                                       ),
                                     ),
-                                    const SizedBox(
-                                      width: 20,
-                                    ),
+                                    const SizedBox(width: 20),
                                     Column(
                                       children: [
                                         SizedBox(
                                           height: 120,
                                           child: Center(
                                             child: SizedBox(
-                                              width: 210,
+                                              width: 175,
                                               child: Text(
                                                 snapshot.data?['noticiasf102'],
                                                 style: GoogleFonts.roboto(
@@ -676,16 +664,14 @@ class _AstonNewsPageState extends State<AstonNewsPage> {
                                 ),
                               ),
                             ),
-                            const SizedBox(
-                              height: 10,
-                            ),
+                            const SizedBox(height: 10),
                           ],
                         ),
                       ),
-                      const SizedBox(
-                        height: 20,
-                      ),
+                      const SizedBox(height: 20),
                       Container(
+                        width: 365,
+                        height: 180,
                         decoration: BoxDecoration(
                           color: const Color.fromRGBO(161, 211, 80, 1),
                           borderRadius: BorderRadius.circular(
@@ -695,7 +681,7 @@ class _AstonNewsPageState extends State<AstonNewsPage> {
                         child: Column(
                           children: [
                             SizedBox(
-                              height: 180,
+                              height: 170,
                               child: Padding(
                                 padding:
                                     const EdgeInsets.symmetric(horizontal: 10),
@@ -718,16 +704,14 @@ class _AstonNewsPageState extends State<AstonNewsPage> {
                                         ),
                                       ),
                                     ),
-                                    const SizedBox(
-                                      width: 20,
-                                    ),
+                                    const SizedBox(width: 20),
                                     Column(
                                       children: [
                                         SizedBox(
                                           height: 120,
                                           child: Center(
                                             child: SizedBox(
-                                              width: 210,
+                                              width: 175,
                                               child: Text(
                                                 snapshot.data?['noticiasf103'],
                                                 style: GoogleFonts.roboto(
@@ -775,9 +759,7 @@ class _AstonNewsPageState extends State<AstonNewsPage> {
                                 ),
                               ),
                             ),
-                            const SizedBox(
-                              height: 10,
-                            ),
+                            const SizedBox(height: 10),
                           ],
                         ),
                       ),
@@ -785,6 +767,8 @@ class _AstonNewsPageState extends State<AstonNewsPage> {
                         height: 20,
                       ),
                       Container(
+                        width: 365,
+                        height: 180,
                         decoration: BoxDecoration(
                           color: const Color.fromRGBO(161, 211, 80, 1),
                           borderRadius: BorderRadius.circular(
@@ -794,7 +778,7 @@ class _AstonNewsPageState extends State<AstonNewsPage> {
                         child: Column(
                           children: [
                             SizedBox(
-                              height: 180,
+                              height: 170,
                               child: Padding(
                                 padding:
                                     const EdgeInsets.symmetric(horizontal: 10),
@@ -817,16 +801,14 @@ class _AstonNewsPageState extends State<AstonNewsPage> {
                                         ),
                                       ),
                                     ),
-                                    const SizedBox(
-                                      width: 20,
-                                    ),
+                                    const SizedBox(width: 20),
                                     Column(
                                       children: [
                                         SizedBox(
                                           height: 120,
                                           child: Center(
                                             child: SizedBox(
-                                              width: 210,
+                                              width: 175,
                                               child: Text(
                                                 snapshot.data?['noticiasf104'],
                                                 style: GoogleFonts.roboto(
@@ -874,15 +856,11 @@ class _AstonNewsPageState extends State<AstonNewsPage> {
                                 ),
                               ),
                             ),
-                            const SizedBox(
-                              height: 10,
-                            ),
+                            const SizedBox(height: 10),
                           ],
                         ),
                       ),
-                      const SizedBox(
-                        height: 20,
-                      ),
+                      const SizedBox(height: 20),
                     ],
                   );
                 },
